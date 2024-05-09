@@ -1,0 +1,21 @@
+{
+    "name": "PHP Laravel",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": {
+            "VARIANT": "7",
+            "INSTALL_NODE": "true",
+            "NODE_VERSION": "lts/*"
+        }
+    },
+    "settings": { 
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "extensions": [
+        "felixfbecker.php-intellisense",
+        "onecentlin.laravel5-snippets"
+    ],
+    "forwardPorts": [8000],
+    "postCreateCommand": "composer install && npm install",
+    "remoteUser": "vscode"
+}
